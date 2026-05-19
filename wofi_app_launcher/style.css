@@ -1,0 +1,65 @@
+/* Global Window Layout */
+window {
+    margin: 0px;
+    border: 2px solid #333333; /* Sleek grey border */
+    border-radius: 8px;
+    background-color: #111111; /* Dark black background */
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}
+
+/* Search Bar Wrapper */
+#outer-box {
+    margin: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+/* The Search Input Field */
+#input {
+    margin: 5px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: #1a1a1a; /* Dark grey input background */
+    color: #ffffff; /* White text */
+}
+
+#input:focus {
+    border: 1px solid #ffffff; /* Turns bright white when typing */
+    outline: none;
+}
+
+/* Inner List Wrapper */
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Individual App Rows */
+#entry {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+/* App text and icons */
+#text {
+    color: #bbbbbb; /* Medium grey text for unselected apps */
+    margin-left: 10px;
+}
+
+#img {
+    margin-right: 5px;
+}
+
+/* Hover & Selection State */
+#entry:selected {
+    background-color: #ffffff; /* Pure white selection background */
+}
+
+#entry:selected #text {
+    color: #111111; /* Inverse dark text for contrast */
+    font-weight: bold;
+}

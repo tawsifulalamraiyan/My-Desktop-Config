@@ -1,0 +1,15 @@
+# General settings
+show=drun
+allow_images=true
+insensitive=true
+prompt=Search Apps...
+width=400
+height=350
+location=center
+
+# Clean up layout
+halign=fill
+content_type=application/x-desktop
+
+# Hide window decorations
+no_actions=true

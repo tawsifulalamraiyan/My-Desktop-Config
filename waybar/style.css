@@ -1,0 +1,92 @@
+/* Reset and global styles */
+* {
+    font-family:
+        "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #111111; /* Dark black background */
+    color: #ffffff; /* White text */
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* Individual Module Base Styling */
+#custom-arch,
+#workspaces,
+#clock,
+#network,
+#cpu,
+#memory,
+#temperature {
+    background-color: #222222; /* Dark grey module backgrounds */
+    padding: 0px 12px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    border: 0px solid #333333; /* Subtle border */
+}
+
+/* Arch Launcher Button */
+#custom-arch {
+    color: #ffffff;
+    font-size: 16px;
+    padding-right: 15px;
+    padding-left: 12px;
+    background-color: #2a2a2a;
+    transition-duration: 300ms;
+}
+
+#custom-arch:hover {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 8px;
+    color: #888888; /* Inactive workspace: Medium Grey */
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color: #ffffff; /* Active workspace: White */
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    color: #111111;
+    background-color: #333333;
+}
+
+/* Center Clock */
+#clock {
+    background-color: #1a1a1a;
+    border-color: #444444;
+    font-weight: bold;
+}
+
+/* Right Side Modules - Monochrome Variations */
+#network {
+    color: #ffffff;
+}
+
+#cpu {
+    color: #dddddd;
+}
+
+#memory {
+    color: #bbbbbb;
+}
+
+#temperature {
+    color: #999999;
+}
+
+#temperature.critical {
+    color: #ffffff;
+    background-color: #551111; /* Subtle dark red only for emergency heat */
+}
