@@ -2,8 +2,9 @@
 window {
     margin: 0px;
     border: 2px solid #333333; /* Sleek grey border */
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #111111; /* Dark black background */
+    opacity: 0.85;
     font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 14px;
 }
@@ -19,8 +20,8 @@ window {
 #input {
     margin: 5px;
     border: 1px solid #333333;
-    border-radius: 4px;
-    padding: 4px 8px;
+    border-radius: 8px;
+    padding: 4px 5px;
     background-color: #1a1a1a; /* Dark grey input background */
     color: #ffffff; /* White text */
 }
