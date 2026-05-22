@@ -44,6 +44,7 @@ local browser = "firefox"
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("mako &")
 end)
 
 -------------------------------
@@ -352,13 +353,6 @@ hl.window_rule({
 })
 
 -- Add the new rule for Zed transparency right below it
-hl.window_rule({
-	name = "zed-transparency",
-	match = {
-		class = "dev.zed.Zed",
-	},
-	opacity = "0.70 0.70",
-})
 
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
