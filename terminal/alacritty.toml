@@ -1,48 +1,86 @@
-[window]
-padding = { x = 20, y = 20 }
-dynamic_padding = true
-decorations = "none"
-# Opacity: 0.0 is invisible, 1.0 is opaque
-opacity = 0.7
-blur = true
+# ==========================================
+#  ALACRITTY MINIMALIST CONFIGURATION
+# ==========================================
 
+# --- General Settings ---
+
+# --- Typography ---
 [font]
-normal = { family = "Fira Code", style = "Regular" }
-bold = { family = "Fira Code", style = "Bold" }
-size = 12.0
+size = 12.5
 
+[font.normal]
+family = "Fira Code"
+style = "Medium"
+
+
+[font.bold]
+family = "Fira Code"
+style = "Bold"
+
+[font.italic]
+family = "Fira Code"
+style = "Italic"
+
+[font.bold_italic]
+family = "Fira Code"
+style = "Bold Italic"
+
+
+# --- Window Layout & Spacing ---
+[window]
+decorations = "None"      # Hides the title bar for a minimal look
+opacity = 0.85            # Matches your 0.85 opacity
+blur = true               # Enables blur (supported on macOS and some Linux compositors)
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 120
+lines = 35
+
+[window.padding]
+x = 16
+y = 16
+
+
+# --- Static Cursor Aesthetics ---
 [cursor]
-style = { shape = "Beam", blinking = "Always" }
-vi_mode_style = "Block"
+blink_interval = 500      # Milliseconds (matches 0.5s blinking)
 
+[cursor.style]
+shape = "Underline"       # Matches your 'underline' choice
+blinking = "On"           # Enables cursor blinking
+
+
+# --- Terminal Performance & Mouse ---
+[mouse]
+hide_when_typing = true
+
+
+# --- Aesthetic "Tokyo Night" Minimal Color Palette ---
 [colors.primary]
-background = "#000000"
-foreground = "#ffffff"
+background = "#000000"    # Pure black background
+foreground = "#ffffff"    # Crisp white text
 
 [colors.cursor]
-text = "#000000"
-cursor = "#ffffff"
+text = "#1a1b26"
+cursor = "#e0af68"
 
 [colors.normal]
-black =   "#1a1a1a"
-red =     "#666666"
-green =   "#888888"
-yellow =  "#aaaaaa"
-blue =    "#cccccc"
-magenta = "#dddddd"
-cyan =    "#eeeeee"
-white =   "#ffffff"
+black   = "#414868"
+red     = "#f7768e"
+green   = "#73daca"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
 
 [colors.bright]
-black =   "#444444"
-red =     "#777777"
-green =   "#999999"
-yellow =  "#bbbbbb"
-blue =    "#dddddd"
-magenta = "#eeeeee"
-cyan =    "#f2f2f2"
-white =   "#ffffff"
-
-[scrolling]
-history = 10000
-multiplier = 3
+black   = "#414868"
+red     = "#f7768e"
+green   = "#73daca"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
