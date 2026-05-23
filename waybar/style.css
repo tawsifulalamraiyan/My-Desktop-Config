@@ -1,7 +1,6 @@
 /* Reset and global styles */
 * {
-    font-family:
-        "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     border: none;
     border-radius: 0;
@@ -9,10 +8,11 @@
 }
 
 window#waybar {
-    background-color: #111111; /* Dark black background */
-    color: #ffffff; /* White text */
+    background-color: transparent; /* Dark black background */
+    color: #ffffff;            /* White text */
     transition-property: background-color;
-    transition-duration: 0.5s;
+    transition-duration: .5s;
+    
 }
 
 /* Individual Module Base Styling */
@@ -26,7 +26,7 @@ window#waybar {
     background-color: #222222; /* Dark grey module backgrounds */
     padding: 0px 12px;
     margin: 4px 2px;
-    border-radius: 5px;
+    border-radius: 0px;
     border: 0px solid #333333; /* Subtle border */
 }
 
@@ -59,7 +59,7 @@ window#waybar {
 
 #workspaces button:hover {
     color: #111111;
-    background-color: #333333;
+  
 }
 
 /* Center Clock */
