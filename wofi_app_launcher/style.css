@@ -2,7 +2,7 @@
 window {
     margin: 0px;
     border: 2px solid #333333; /* Sleek grey border */
-    border-radius: 10px;
+    border-radius: 0px;
     background-color: #111111; /* Dark black background */
     opacity: 0.85;
     font-family: "JetBrainsMono Nerd Font", monospace;
@@ -19,9 +19,10 @@ window {
 /* The Search Input Field */
 #input {
     margin: 5px;
-    border: 1px solid #333333;
-    border-radius: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
     padding: 4px 5px;
+    outline: "none";
     background-color: #1a1a1a; /* Dark grey input background */
     color: #ffffff; /* White text */
 }
@@ -41,7 +42,7 @@ window {
 /* Individual App Rows */
 #entry {
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 0px;
     background-color: transparent;
 }
 
