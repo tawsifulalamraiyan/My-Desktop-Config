@@ -4,7 +4,6 @@ window {
     border: 2px solid #333333; /* Sleek grey border */
     border-radius: 0px;
     background-color: #111111; /* Dark black background */
-    opacity: 0.85;
     font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 14px;
 }
@@ -19,17 +18,16 @@ window {
 /* The Search Input Field */
 #input {
     margin: 5px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 0px;
     padding: 4px 5px;
-    outline: "none";
     background-color: #1a1a1a; /* Dark grey input background */
     color: #ffffff; /* White text */
 }
 
 #input:focus {
-    border: 1px solid #ffffff; /* Turns bright white when typing */
-    outline: none;
+    border: 0px solid #ffffff; /* Turns bright white when typing */
+    
 }
 
 /* Inner List Wrapper */
