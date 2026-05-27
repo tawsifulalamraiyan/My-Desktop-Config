@@ -28,7 +28,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "kitty"
 local fileManager = "nautilus"
-local menu = "wofi --show drun"
+local menu = "rofi -show drun"
 local browser = "firefox"
 
 -------------------
@@ -45,7 +45,14 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("mako &")
+	--hl.exec_cmd("qs -c noctalia-shell")
 end)
+
+-- Add this to your autostart/exec-once section
+local handle = io.popen("gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'")
+if handle then
+	handle:close()
+end
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
@@ -53,6 +60,8 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
+hl.env("XCURSOR_THEME", "Breeze")
+hl.env("HYPRCURSOR_THEME", "Breeze")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
@@ -81,10 +90,9 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {
-		gaps_in = 3,
-		gaps_out = 3,
-
-		border_size = 1,
+		gaps_in = 2.5,
+		gaps_out = 5,
+		border_size = 2,
 
 		col = {
 			active_border = { colors = { "0xffffffff" }, angle = 45 },
@@ -101,8 +109,8 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 0,
-		rounding_power = 2,
+		rounding = 10,
+		rounding_power = 0,
 
 		-- Change transparency of focused and unfocused windows
 		active_opacity = 0.85,
