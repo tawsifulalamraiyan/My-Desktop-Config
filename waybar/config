@@ -1,60 +1,71 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 32,
+    "height": 34,
     "spacing": 4,
 
-    // Choose which modules appear on which side
-    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-left": ["custom/distro", "hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "cpu", "memory", "temperature"],
+    "modules-right": ["network", "pulseaudio", "cpu", "memory", "tray", "custom/power"],
 
-    // --- LEFT MODULES ---
-
-    "custom/arch": {
-        "format": "󰣇",
-        "on-click": "wofi --show drun",
+    "custom/distro": {
+        "format": " 󰣇 ",
+        "on-click": "rofi -show drun",
         "tooltip": false
     },
 
     "hyprland/workspaces": {
-        "disable-scroll": true,
+        "disable-scroll": false,
         "all-outputs": true,
-        "active-only": false,
-        "persistent-workspaces": {
-            "*": 4 // Ensures 4 workspaces always show
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󰮯",
+            "default": "󰊠"
         },
-        "format": "{name}"
+        "persistent-workspaces": {
+            "*": 4
+        }
     },
 
-    // --- CENTER MODULES ---
+    "hyprland/window": {
+        "format": "{initialTitle}",
+        "max-length": 40
+    },
 
     "clock": {
-        "format": "{:%H:%M - %a, %b %d}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "format": "󱑂 {:%H:%M | %a %d %b}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
 
-    // --- RIGHT MODULES ---
-
     "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "󰈀  {ipaddr}",
-        "format-disconnected": "󰤮  Disconnected",
-        "tooltip-format": "{ifname} via {gwaddr}"
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol"
     },
 
     "cpu": {
-        "format": "  {usage}%",
-        "tooltip": false
+        "format": " {usage}%",
+        "on-click": "alacritty -e htop" 
     },
 
     "memory": {
-        "format": "  {}%"
+        "format": " {percentage}%",
+        "on-click": "alacritty -e htop"
     },
 
-    "temperature": {
-        "critical-threshold": 80,
-        "format": " {temperatureC}°C",
+    "custom/power": {
+        "format": "⏻",
+        //"on-click": "poweroff",
         "tooltip": false
     }
 }
