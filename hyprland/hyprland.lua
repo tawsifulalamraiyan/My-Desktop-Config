@@ -90,9 +90,9 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {
-		gaps_in = 2.5,
-		gaps_out = 5,
-		border_size = 2,
+		gaps_in = 0,
+		gaps_out = 0,
+		border_size = 0,
 
 		col = {
 			active_border = { colors = { "0xffffffff" }, angle = 45 },
@@ -109,7 +109,7 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 10,
+		rounding = 0,
 		rounding_power = 0,
 
 		-- Change transparency of focused and unfocused windows
@@ -276,6 +276,9 @@ hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
+
+-- logout in hyprland
+hl.bind(mainMod .. " + ALT + L", hl.dsp.exit())
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
