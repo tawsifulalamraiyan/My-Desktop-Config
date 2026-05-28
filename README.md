@@ -34,4 +34,4 @@ Welcome to my personal Linux desktop environment configuration. This repository 
 Make sure you have the core packages installed. On **Arch Linux**, you can install them using:
 
 ```bash
-sudo pacman -S hyprland waybar kitty wofi
+sudo pacman -S hyprland hyprpaper hyprlock waybar dolphin mako kitty wofi satty
