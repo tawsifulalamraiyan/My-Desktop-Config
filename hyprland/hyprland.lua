@@ -27,7 +27,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal = "kitty"
-local fileManager = "nautilus"
+local fileManager = "dolphin"
 local menu = "rofi -show drun"
 local browser = "firefox"
 
@@ -277,6 +277,12 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
+--screenshot
+--hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind(
+	"Print",
+	hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')
+)
 -- logout in hyprland
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exit())
 
