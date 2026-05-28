@@ -13,6 +13,7 @@ Welcome to my personal Linux desktop environment configuration. This repository 
 | **Terminal** | [Kitty](https://sw.kovidgoyal.net/kitty/) | GPU-accelerated terminal emulator |
 | **Application Launcher** | [Wofi](https://hg.sr.ht/~scoopta/wofi) | Launcher and dmenu replacement for Wayland |
 | **Shell** | Zsh / Bash | *[Change this to your preferred shell]* |
+| **Papirus icon theme**| for icon|
 
 ---
 
