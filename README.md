@@ -14,6 +14,7 @@ Welcome to my personal Linux desktop environment configuration. This repository 
 | **Application Launcher** | [Wofi](https://hg.sr.ht/~scoopta/wofi) | Launcher and dmenu replacement for Wayland |
 | **Shell** | Zsh / Bash | *[Change this to your preferred shell]* |
 | **Papirus icon theme**| for icon|
+|**grim & satty **| for screenshot|
 
 ---
 
