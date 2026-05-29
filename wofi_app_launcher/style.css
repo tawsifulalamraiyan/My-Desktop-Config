@@ -10,7 +10,7 @@ window {
 
 /* Search Bar Wrapper */
 #outer-box {
-    margin: 10px;
+    margin: 0px;
     border: none;
     background-color: transparent;
 }
@@ -32,7 +32,7 @@ window {
 
 /* Inner List Wrapper */
 #inner-box {
-    margin: 5px;
+    margin: 0px;
     border: none;
     background-color: transparent;
 }
