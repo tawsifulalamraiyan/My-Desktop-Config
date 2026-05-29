@@ -9,22 +9,21 @@
     "modules-right": ["network", "pulseaudio", "cpu", "memory", "tray", "custom/power"],
 
     "custom/distro": {
-        "format": " 󰣇 ",
+        "format": " 󰊠 ",
         "on-click": "rofi -show drun",
         "tooltip": false
     },
 
-    "hyprland/workspaces": {
+   "hyprland/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
         "on-click": "activate",
-        "format": "{icon}",
-        "format-icons": {
-            "active": "󰮯",
-            "default": "󰊠"
-        },
+        "format": "{name}",
         "persistent-workspaces": {
-            "*": 4
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
         }
     },
 
